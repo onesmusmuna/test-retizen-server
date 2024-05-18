@@ -30,15 +30,16 @@ model Person {
 
 model Post {
   id        Int     @id @default(autoincrement())
-  userid    Int
-  country   String
+  approved  Boolean @default(false)
+  userid    String
+  county    String
   location  String
   category  String
   summary   String
   more      String
   thumbnail String
 
-  images    String[]
+  images    String[] 
 
   updated   DateTime @updatedAt
   created   DateTime @default(now())
